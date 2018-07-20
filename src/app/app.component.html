@@ -1,0 +1,69 @@
+
+  <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarsExample03">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link"  routerLink="/"   routerLinkActive="active">
+          Current weather</a>          </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/forcast" routerLinkActive="active" >5 Day forecast</a>
+        </li>
+        
+      </ul>
+      <form  id="property" class="form-inline my-2 my-md-0">
+        <label class="city1">Search &nbsp;</label><input class="form-control" name="search" value=" sds" id="address" [(ngModel)]="cname" (keyup)="onKey($event)" type="text"   placeholder="Search">
+      </form>
+  
+    </div>
+  </nav>
+
+
+<br><br>
+
+<!--<hello name="{{ cname }}" align="center"></hello>-->
+<div class="jumbotron text-center">
+            <h1><canvas id="partly-cloudy-day" width="64" height="64"></canvas> Weather App</h1>
+        </div>
+<br>
+
+<div class="container" align=center>
+
+<div class="row">
+<div class="col-md-12 col-xs-8 col-xs-push-2 col-md-push-3" align="center">
+  <div class="weather text-center" >
+    <h2 class="temp">{{this.Math.round(weatherdata1.main.temp - 273)}}&deg;</h2>
+    <h3><span class="city">{{weatherdata1.name}}</span>, <span class="country">{{weatherdata1.sys.country}}</span></h3>
+    <div class="iconpic">
+      <img height=100px; width=100px src="https://openweathermap.org/img/w/{{weatherdata1.weather[0].icon}}.png" class='img img-responsive center-block'>
+    </div>
+    <h4 class="weatherDetail">{{weatherdata1.weather["0"].description}}</h4>
+   
+   
+   
+    <div class="toggle" id="c">
+      <button type="button" class="btn btn-danger btn-lg"></button>
+    </div>
+  </div><!--weather-->
+</div>
+</div><!--row-->
+<br/>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
